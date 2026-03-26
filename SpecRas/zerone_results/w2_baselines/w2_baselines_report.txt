@@ -1,0 +1,22 @@
+===========================================================================
+W2 Additional Baselines Report
+===========================================================================
+Method                                     Acc%  Macro-F1     AUC   FP   FN
+---------------------------------------------------------------------------
+MLP-ImageNet (ImageNet ResNet18, no fine-tune)  72.25     0.722   0.649  111    0
+MLP-1200 (1200→256→2)                     91.25     0.903     1.0    0   35
+PatchCore (ResNet18 layer3, k=9)          21.00     0.174     0.0  162  154
+
+Context (from Table 2 of the paper):
+  SpecRas SWA            (Supervised, proposed) :  97.00%  F1=0.969  FP=12  FN=0
+  HetSpatVAE             (One-class,  proposed) :  98.25%  F1=0.982  FP=7   FN=0
+  1D-CNN [Wen 2018]      (Supervised, external) :  68.00%  F1=0.659
+  RawVec-ResNet18        (Supervised, ablation) :  79.75%  F1=0.788
+  FlatVAE                (One-class,  ablation) :  38.75%  F1=0.357
+
+Interpretation:
+  MLP-1200 provides a fair 2D-raster vs 1D-flat comparison:
+    SpecRas SWA should substantially outperform MLP-1200 on the SAME features,
+    attributing the gain entirely to 2D spatial layout (not model capacity).
+  PatchCore provides a competitive unsupervised baseline on the SAME images:
+    HetSpatVAE should outperform PatchCore, validating the spatial VAE approach.

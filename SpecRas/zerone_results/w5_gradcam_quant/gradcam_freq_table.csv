@@ -1,0 +1,7 @@
+band,centre_hz,mean_diff_activation,std_diff_activation,above_median_fraction,effect_size_d
+2f0=100Hz (core magnetostriction),100,0.1689,0.0095,0.0,-1.686
+4f0=200Hz (winding Lorentz),200,0.2298,0.0087,0.0,-0.757
+300Hz (3rd harmonic winding resonance),300,0.2906,0.007,0.848,0.173
+400Hz (4th harmonic),400,0.3514,0.0033,1.0,1.102
+500Hz (5th harmonic winding resonance),500,0.3556,0.0024,1.0,1.166
+600-800Hz (structural resonance),700,0.3091,0.0136,0.841,0.455

@@ -1,0 +1,21 @@
+============================================================
+W3 Weight Sensitivity Report
+============================================================
+Grid: alpha in [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+      w_stft in [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+      (w_cwt = w_ctx = (1-w_stft)/2)
+
+Paper setting: alpha=0.6, w_stft=0.5
+  -> accuracy at paper setting : 99.25%
+
+Grid accuracy statistics (all 99 configurations):
+  Mean   : 91.08%
+  Std    : 8.97%
+  Min    : 66.25%  (alpha=1.0, w_stft=0.1)
+  Max    : 99.25%  (alpha=0.5, w_stft=0.3)
+  Range  : 33.00 pp
+
+Configs with accuracy >= paper accuracy:
+  Count  : 7 / 99
+Configs with zero missed faults (FN=0):
+  Count  : 38 / 99

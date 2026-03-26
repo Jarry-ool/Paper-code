@@ -1,0 +1,11 @@
+% ---- 消融讨论段落（根据实际结果自动填充） ----
+
+\paragraph{Ablation: SpecRas rasterisation}
+The raster-stripe encoding improves test accuracy by $+$17.25\,pp and macro-F1 by $+$0.181 over the RawVec-ResNet18 baseline, confirming that the spatial layout of PSD bins enables convolutional filters to exploit local spectral correlations.
+
+\paragraph{Ablation: spatial latent map}
+HetSpatVAE achieves $+$59.50\,pp accuracy and $+$0.625 macro-F1 over FlatVAE, supporting the claim that the $7\times7$ spatial structure is critical for localising time-frequency anomalies.
+
+\paragraph{External baseline: 1D-CNN}
+SpecRas (SWA) outperforms the 1D-CNN by $+$29.00\,pp in accuracy, indicating that 2-D raster images preserve multi-scale context that 1-D convolutions cannot efficiently model.
+

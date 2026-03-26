@@ -1,0 +1,2 @@
+﻿method,paradigm,acc,pre_n,rec_n,rec_f,macro_f1
+"FlatVAE (GAP, no spatial)",One-class,0.3875,0.5021,0.4919,0.2208,0.3571

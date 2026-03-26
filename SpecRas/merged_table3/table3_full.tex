@@ -1,0 +1,38 @@
+% ---- Auto-generated Table 3 ----
+\begin{table}[H]
+  \centering
+  \caption{%
+    Diagnostic performance on the held-out test set
+    (246 normal / 154 fault, $N=400$; transformers 134 and 135).
+    Best result per metric in \textbf{bold}.
+    $^\dagger$: trained without fault labels.
+    $^\ddagger$: external baseline.
+  }
+  \label{tab:main_results}
+  \small
+  \renewcommand{\arraystretch}{1.25}
+  \begin{tabular}{@{}p{4.2cm}p{1.8cm}ccccc@{}}
+    \toprule
+    Method & Paradigm
+      & Acc.$\uparrow$
+      & Pre.(N)$\uparrow$
+      & Rec.(N)$\uparrow$
+      & Rec.(F)$\uparrow$
+      & Macro-F1$\uparrow$ \\
+    \midrule
+    RawVec_ResNet18
+      & Supervised   & 79.75\% & 0.848 & 0.817 & 0.766 & 0.788 \\
+    1DCNN_Wen2018$^\ddagger$
+      & Supervised   & 68.00\% & 0.732 & 0.756 & 0.558 & 0.659 \\
+    FlatVAE (GAP, no spatial)$^\dagger$
+      & One-class   & 38.75\% & 0.502 & 0.492 & 0.221 & 0.357 \\
+    \midrule
+    SpecRas + ResNet18 (best-val)
+      & Supervised   & 94.25\% & \textbf{1.000} & 0.907 & \textbf{1.000} & 0.941 \\
+    SpecRas + ResNet18 (SWA)
+      & Supervised   & 97.00\% & \textbf{1.000} & 0.951 & \textbf{1.000} & 0.969 \\
+    HetSpatVAE (SpatialResNetVAE)$^\dagger$
+      & One-class   & \textbf{98.25\%} & \textbf{1.000} & \textbf{0.972} & \textbf{1.000} & \textbf{0.982} \\
+    \bottomrule
+  \end{tabular}
+\end{table}

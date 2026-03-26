@@ -1,0 +1,29 @@
+======================================================================
+W5 Grad-CAM Physical Validation Report
+======================================================================
+Fault class   : 故障  (n=154)
+Normal class  : 正常  (n=246)
+
+Top-10% activated Hz bins (fault - normal diff) vs literature fault bands
+  All bands positive (Fault > Normal): True
+  Global median diff activation : 0.2892
+  Global mean   diff activation : 0.2793
+
+Primary metric — per-band differential activation (Fault − Normal):
+  above_median_fraction: proportion of band Hz bins where Fault-Normal diff
+  exceeds the global median across all 1000 Hz bins.
+  effect_size_d: (band_mean - global_mean) / global_std
+
+Band                                               MeanDiff   AbvMed   EffSize
+------------------------------------------------------------------------------
+2f0=100Hz (core magnetostriction)                    0.1689    0.000    -1.686
+4f0=200Hz (winding Lorentz)                          0.2298    0.000    -0.757
+300Hz (3rd harmonic winding resonance)               0.2906    0.848     0.173
+400Hz (4th harmonic)                                 0.3514    1.000     1.102
+500Hz (5th harmonic winding resonance)               0.3556    1.000     1.166
+600-800Hz (structural resonance)                     0.3091    0.841     0.455
+
+Secondary metric — Top-10% Jaccard (100 bins vs known fault Hz):
+  Precision : 0.330
+  Recall    : 0.090
+  Jaccard   : 0.076  (note: low by design — top-10% is a narrow band; primary metric above is more informative)

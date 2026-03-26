@@ -1,0 +1,3 @@
+﻿split,pred_col,accuracy,f1_macro,confmat_png
+val,pred_severity,0.3568627450980392,0.2630057803468208,E:\我2\专业实践-工程专项\3-生技中心\1-项目：变压器深度学习诊断故障\3-code\diagnosis\test\ZERONE\zerone_results\scores\val\confmat\confmat__val__pred_severity.png
+val,pred_hi_80,0.3568627450980392,0.2630057803468208,E:\我2\专业实践-工程专项\3-生技中心\1-项目：变压器深度学习诊断故障\3-code\diagnosis\test\ZERONE\zerone_results\scores\val\confmat\confmat__val__pred_hi_80.png

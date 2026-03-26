@@ -1,0 +1,4 @@
+method,paradigm,accuracy,precision_N,recall_N,recall_F,macro_F1,AUC,FP,FN
+"MLP-ImageNet (ImageNet ResNet18, no fine-tune)",Supervised,72.25,1.0,0.549,1.0,0.722,0.649,111,0
+MLP-1200 (1200→256→2),Supervised,91.25,0.875,1.0,0.773,0.903,1.0,0,35
+"PatchCore (ResNet18 layer3, k=9)",One-class,21.0,0.353,0.341,0.0,0.174,0.0,162,154

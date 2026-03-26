@@ -1,0 +1,38 @@
+# ============================================================
+# Root-level: only track the three designated folders + README
+# ============================================================
+/*
+!/SpecRas
+!/HetSpatVAE
+!/vibration datasets for transformers
+!/README.md
+!/.gitignore
+
+# ============================================================
+# SpecRas — exclude generated/heavy artifacts
+# ============================================================
+SpecRas/__pycache__/
+SpecRas/zerone_useless/
+SpecRas/zerone_results/images/
+SpecRas/zerone_results/features/
+
+# ============================================================
+# HetSpatVAE — exclude model checkpoints (1.4 GB)
+# ============================================================
+HetSpatVAE/__pycache__/
+HetSpatVAE/vae_useless/
+HetSpatVAE/second/
+HetSpatVAE/outputs/model/
+
+# ============================================================
+# General: Python cache, model weights, temp files
+# ============================================================
+**/__pycache__/
+*.py[cod]
+*.pth
+*.pt
+*.ckpt
+*.zip
+*.egg-info/
+.DS_Store
+Thumbs.db
