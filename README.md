@@ -178,13 +178,62 @@ python hetero_viz.py
 python w3_weight_sensitivity.py
 ```
 
-> **Note:** Edit `SpecRas/config.py` (`TRAIN_ROOT`, `VAL_ROOT`, `TEST_ROOT`) and `HetSpatVAE/hetero_config.py` (`TRAIN_DIR`, `VAL_DIR`, `TEST_DIR`) to point to the dataset location if running from a different directory.
+> **Before running:** update the data paths in `SpecRas/config.py` and `HetSpatVAE/hetero_config.py` to match your local clone. See [Configuring Data Paths](#configuring-data-paths) below.
+
+---
+
+## What Is Not Included (and How to Reproduce It)
+
+To keep the repository at a manageable size, the following generated artifacts are **excluded** from version control. All of them can be fully reproduced by running the scripts in order.
+
+| Excluded path | Size | How to regenerate |
+|---|---|---|
+| `SpecRas/zerone_results/images/` | ~186 MB | `python zerone_make_images.py` |
+| `HetSpatVAE/outputs/model/` | ~1.4 GB | `python hetero_train.py` |
+| All `*.pth` / `*.pt` files | varies | run the respective training script |
+
+Everything else — source code, pre-computed metrics/CSVs, result figures, and the full vibration dataset — **is included**.
+
+---
+
+## Configuring Data Paths
+
+Both pipelines use hard-coded absolute paths that **must be updated** before running on a new machine.
+
+### SpecRas — `SpecRas/config.py`
+
+Locate the `ROOT` and split variables near the top of the file and replace with your local path:
+
+```python
+# SpecRas/config.py  (lines ~23–42)
+
+ROOT = Path(r"/path/to/repo")          # ← change to your repo root
+
+TRAIN_ROOT = ROOT / "vibration datasets for transformers/train"
+VAL_ROOT   = ROOT / "vibration datasets for transformers/val"
+TEST_ROOT  = ROOT / "vibration datasets for transformers/test"
+```
+
+> The dataset folder is included in this repo at `vibration datasets for transformers/`, so set `ROOT` to wherever you cloned the repository.
+
+### HetSpatVAE — `HetSpatVAE/hetero_config.py`
+
+Locate `PROJECT_ROOT` at the top and update it:
+
+```python
+# HetSpatVAE/hetero_config.py  (lines ~11–13)
+
+PROJECT_ROOT = Path(
+    r"/path/to/repo/vibration datasets for transformers"
+)
+# TRAIN_DIR, VAL_DIR, TEST_DIR are derived automatically as subfolders
+```
 
 ---
 
 ## Results
 
-Model checkpoints are excluded from this repository (large binary files). Re-run the training scripts to reproduce all results. Pre-computed metrics and visualizations are available in `SpecRas/zerone_results/` and `HetSpatVAE/outputs/diagnosis_report/`.
+Model checkpoints and generated raster images are excluded (see section above). Re-run the training scripts to reproduce them. Pre-computed metrics, CSVs, and result figures are already included in `SpecRas/zerone_results/` and `HetSpatVAE/outputs/diagnosis_report/`.
 
 ---
 
