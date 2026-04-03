@@ -1,6 +1,6 @@
 # Transformer Fault Diagnosis via Deep Learning on Vibration Signals
 
-**Code and dataset for the paper submitted to *Engineering Applications of Artificial Intelligence* (EAAI)**
+**Code and dataset for the paper submitted to *Expert Systems with Applications* (ESWA)**
 
 This repository provides the complete implementation of two complementary deep learning pipelines for power transformer fault diagnosis from multi-channel vibration signals, along with the accompanying dataset.
 
