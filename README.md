@@ -249,4 +249,4 @@ If you use this code or dataset, please cite:
 
 ## License
 
-This repository is released for research purposes accompanying the EAAI submission. The vibration dataset was collected from real-world power transformer units and is provided solely for academic reproducibility.
+This repository is released for research purposes. The vibration dataset was collected from real-world power transformer units and is provided solely for academic reproducibility.
