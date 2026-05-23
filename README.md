@@ -1,6 +1,6 @@
 # Transformer Fault Diagnosis via Deep Learning on Vibration Signals
 
-**Code and dataset for the paper submitted to *Knowledge-Based Systems* (KBS)**
+**Code and dataset for the paper submitted to *Advanced Engineering Informatics* (AEI)**
 
 This repository provides the complete implementation of two complementary deep learning pipelines for power transformer fault diagnosis from multi-channel vibration signals, along with the accompanying dataset.
 
